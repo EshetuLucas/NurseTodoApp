@@ -1,4 +1,5 @@
 ##  Detail about the todo app
+demo video = https://www.loom.com/share/adc5b50c8a5543278f8a21e9a503ff8e
 
 # Database structure.
 
@@ -19,7 +20,6 @@ Every task has a resident, every user has a resident he/she should check on.
 # Flutter App.
 
 I have used Stacked Architecture to separate business logic from UI component 
-
 There is nothing hard-coded in the app, no hard-coded users, no hard-coded data, and no hardcoded task. 
 You can create an account, log in with that account, and use the app. simple. 
 The app starts from Calander view, which will show you the calendar and the list of tasks if there is any on selected data,
@@ -31,6 +31,7 @@ You can mark a task as done,
 You can change your shift,
 You can logout.
 
+# UI Part
 Noting copied from the internet, I have worked with amazing UI/UX designers and learned how to implement clean and simple UI. Tried to use Dexter's logo color (red one) as the primary color but didn't work out.
 
 
