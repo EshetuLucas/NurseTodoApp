@@ -67,7 +67,10 @@ class ResidentsView extends HookWidget {
                             : model.residents[index];
                         return GestureDetector(
                           onTap: () => model.onResidentTap(resident),
-                          child: ResidentCard(resident: resident),
+                          child: ResidentCard(
+                            resident: resident,
+                            isBusy: model.isBusy,
+                          ),
                         );
                       },
                     ),

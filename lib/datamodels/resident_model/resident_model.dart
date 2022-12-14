@@ -8,15 +8,16 @@ part 'resident_model.g.dart';
 @freezed
 class ResidentModel with _$ResidentModel {
   ResidentModel._();
-  factory ResidentModel(
-      {required String id,
-      String? phoneNumber,
-      required String fullName,
-      required String gender,
-      required int age,
-      required int roomNumber,
-      @_UserNullTimestampConverter() DateTime? createdAt,
-      @Default(UserType.nurse) UserType? userType}) = _ResidentModel;
+  factory ResidentModel({
+    required String id,
+    String? phoneNumber,
+    required String fullName,
+    required String gender,
+    required int age,
+    required int roomNumber,
+    @_UserNullTimestampConverter() DateTime? createdAt,
+    @Default(UserType.nurse) UserType? userType,
+  }) = _ResidentModel;
 
   factory ResidentModel.fromJson(Map<String, dynamic> json) =>
       _$ResidentModelFromJson(json);

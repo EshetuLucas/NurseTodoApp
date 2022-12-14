@@ -4,14 +4,17 @@ import 'package:dexter_code_test/ui/ui_helpers/app_colors.dart';
 import 'package:dexter_code_test/ui/ui_helpers/shared_styles.dart';
 import 'package:dexter_code_test/ui/ui_helpers/ui_helpers.dart';
 import 'package:flutter/material.dart';
+import 'package:stacked/stacked.dart';
 
 class ResidentCard extends StatelessWidget {
   const ResidentCard({
     Key? key,
     required this.resident,
+    this.isBusy = false,
   }) : super(key: key);
 
   final ResidentModel resident;
+  final bool isBusy;
 
   @override
   Widget build(BuildContext context) {
@@ -33,61 +36,81 @@ class ResidentCard extends StatelessWidget {
               children: [
                 SizedBox(
                   width: 90,
-                  child: ImageBuilder(
-                      imagePath: resident.gender.toLowerCase() == "male"
-                          ? 'assets/images/place_holders/boy.png'
-                          : 'assets/images/place_holders/girl1.png'),
+                  child: SkeletonLoader(
+                    startColor: kcLightWhite,
+                    endColor: kcLightGrey5,
+                    loading: isBusy,
+                    child: ImageBuilder(
+                        imagePath: resident.gender.toLowerCase() == "male"
+                            ? 'assets/images/place_holders/boy.png'
+                            : 'assets/images/place_holders/girl1.png'),
+                  ),
                 ),
                 horizontalSpaceMedium,
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Row(
-                      children: [
-                        Text(
-                          'Name',
-                          style: ktsBoldTextStyle.copyWith(
-                            fontSize: 15,
-                            color: kcPrimaryColor,
+                    SkeletonLoader(
+                      startColor: kcLightWhite,
+                      endColor: kcLightGrey5,
+                      loading: isBusy,
+                      child: Row(
+                        children: [
+                          Text(
+                            'Name',
+                            style: ktsBoldTextStyle.copyWith(
+                              fontSize: 15,
+                              color: kcPrimaryColor,
+                            ),
                           ),
-                        ),
-                        horizontalSpaceSmall,
-                        Text(
-                          resident.fullName,
-                        ),
-                      ],
+                          horizontalSpaceSmall,
+                          Text(
+                            resident.fullName,
+                          ),
+                        ],
+                      ),
                     ),
                     verticalSpaceSmall,
-                    Row(
-                      children: [
-                        Text(
-                          'Age',
-                          style: ktsBoldTextStyle.copyWith(
-                            fontSize: 15,
-                            color: kcPrimaryColor,
+                    SkeletonLoader(
+                      startColor: kcLightWhite,
+                      endColor: kcLightGrey5,
+                      loading: isBusy,
+                      child: Row(
+                        children: [
+                          Text(
+                            'Age',
+                            style: ktsBoldTextStyle.copyWith(
+                              fontSize: 15,
+                              color: kcPrimaryColor,
+                            ),
                           ),
-                        ),
-                        horizontalSpaceSmall,
-                        Text(
-                          '${resident.age}',
-                        ),
-                      ],
+                          horizontalSpaceSmall,
+                          Text(
+                            '${resident.age}',
+                          ),
+                        ],
+                      ),
                     ),
                     verticalSpaceSmall,
-                    Row(
-                      children: [
-                        Text(
-                          'Room Number',
-                          style: ktsBoldTextStyle.copyWith(
-                            fontSize: 15,
-                            color: kcPrimaryColor,
+                    SkeletonLoader(
+                      startColor: kcLightWhite,
+                      endColor: kcLightGrey5,
+                      loading: isBusy,
+                      child: Row(
+                        children: [
+                          Text(
+                            'Room Number',
+                            style: ktsBoldTextStyle.copyWith(
+                              fontSize: 15,
+                              color: kcPrimaryColor,
+                            ),
                           ),
-                        ),
-                        horizontalSpaceSmall,
-                        Text(
-                          '${resident.roomNumber}',
-                        ),
-                      ],
+                          horizontalSpaceSmall,
+                          Text(
+                            '${resident.roomNumber}',
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 )

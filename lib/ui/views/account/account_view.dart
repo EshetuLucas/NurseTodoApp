@@ -133,9 +133,8 @@ class _UserProfile extends ViewModelWidget<AccountViewModel> {
                 model.userFullName,
                 style: ktsDarkGreyTextStyle,
               ),
-              const Text(
-                // model.currentUser.email,
-                '+251916740322',
+              Text(
+                model.currentUser.email ?? '',
                 style: ktsDarkSmallTextStyle,
               ),
               verticalSpaceTiny,

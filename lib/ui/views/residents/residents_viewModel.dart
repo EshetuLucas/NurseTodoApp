@@ -7,7 +7,11 @@ import 'package:stacked/stacked.dart';
 import 'package:stacked_services/stacked_services.dart';
 
 ResidentModel get fakeResident => ResidentModel(
-    id: "", fullName: 'Duka', gender: 'Male', age: 20, roomNumber: 14);
+    id: "",
+    fullName: 'Duka Lukas Teka ',
+    gender: 'Male',
+    age: 20,
+    roomNumber: 14);
 
 class ResidentsViewModel extends FutureViewModel<List<ResidentModel>> {
   final log = getLogger('ResidentsViewModel');
@@ -46,7 +50,7 @@ class ResidentsViewModel extends FutureViewModel<List<ResidentModel>> {
   }
 
   Future<void> onCreateResident() async {
-    await Future.delayed(const Duration(seconds: 2));
+    await Future.delayed(const Duration(seconds: 3));
     await _navigationService.navigateTo(Routes.createResidentView);
 
     initialise();
