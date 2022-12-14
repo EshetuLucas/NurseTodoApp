@@ -1,24 +1,6 @@
-# dexter_code_test
+##  Detail about the todo app
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
-
-/// Detail about the todo app
-
-Database structure.
+# Database structure.
 
 I only used 3 collections even though you suggested 4. 
 I didn't want to use shiftCollection, Because shift can be an enum and we can use it in task and user model. 
@@ -34,7 +16,8 @@ Every user belongs to some shift, so every task has a shift.
 Every user can view all tasks of his/her shift.
 Every task has a resident, every user has a resident he/she should check on.
 
-Flutter App.
+# Flutter App.
+
 I have used Stacked Architecture to separate business logic from UI component 
 
 There is nothing hard-coded in the app, no hard-coded users, no hard-coded data, and no hardcoded task. 
@@ -47,6 +30,8 @@ You can transfer a task,
 You can mark a task as done,
 You can change your shift,
 You can logout.
+
+Noting copied from the internet, I have worked with amazing UI/UX designers and learned how to implement clean and simple UI. Tried to use Dexter's logo color (red one) as the primary color but didn't work out.
 
 
 Anything else I can add If I have enough time?
@@ -69,8 +54,21 @@ Anything else I can add If I have enough time?
 
 
 
+# dexter_code_test
 
+A new Flutter project.
 
+## Getting Started
 
+This project is a starting point for a Flutter application.
+
+A few resources to get you started if this is your first Flutter project:
+
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
 
 
