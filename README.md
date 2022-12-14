@@ -4,14 +4,13 @@ demo video = https://www.loom.com/share/adc5b50c8a5543278f8a21e9a503ff8e
 # Database structure.
 
 I only used 3 collections even though you suggested 4. 
-I didn't want to use shiftCollection, Because shift can be an enum and we can use it in task and user model. 
+I didn't want to use shiftCollection this time but I know I neccssary when want to implement google-cloud task Because shift can be an enum and we can use it in task and user model for this project. 
  enum ShiftType {
   morning,
   evening,
   night,
 }. 
 Relationship between user, task, and resident.
-
 Every task has a user(nurse) and resident associated with it.
 Every user belongs to some shift, so every task has a shift. 
 Every user can view all tasks of his/her shift.
